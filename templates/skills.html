@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Page</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+    <div class="buttons-container">
+        <button class="section-button" data-target="skills" onclick="toggleSection('skills')">Skills</button>
+        <button class="section-button" data-target="achievements" onclick="toggleSection('achievements')">Achievements</button>
+        <button class="section-button" data-target="licensesandcertifications" onclick="toggleSection('licensesandcertifications')">Licenses and Certifications</button>
+    </div>
+
+    <div class="section" id="skills">
+        <h3>Skills</h3>
+        <div class="photo-container">
+            <div class="photo-wrapper">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/285_R_Project_logo-512.png" alt="Photo 1" class="photo">
+                <p>R Programming Language</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/9543/9543826.png" alt="Photo 2" class="photo">
+                <p>SQL</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Photo 3" class="photo">
+                <p>Python</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/256/732/732220.png" alt="Photo 4" class="photo">
+                <p>Excel</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://clipground.com/images/spss-icon-png-5.png" alt="Photo 5" class="photo">
+                <p>SPSS</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/136/136528.png" alt="Photo 6" class="photo">
+                <p>HTML</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Photo 7" class="photo">
+                <p>CSS</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://assets-global.website-files.com/5eb586cf7696a9c27238a7ed/6095431c47d094515c19ca88_Byteline-icon2.png" alt="Photo 8" class="photo">
+                <p>Web Scraping</p>
+            </div>
+            <div class="photo-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/6332/6332308.png" alt="Photo 9" class="photo">
+                <p>Data Visualizations</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="achievements">
+        <h3>Achievements</h3>
+        <ul>
+            <li>Passed the first stage of the PKM based on MBKM in 2022</li>
+            <li>Passed the first stage of the PKM based on MBKM in 2020</li>
+            <li>Best Paper Award at the Geomatics National Conference 2020</li>
+            <li>Selected as delegate to represent FTMM in Airlangga University NUDC 2023</li>
+            <li>Participant Statistika Ria dan Festival Sains Data 2022</li>
+            <li>Participant Garuda Hacks 2.0 2021</li>
+            <li>Participant Tournament Data Science Nasional 2021</li>
+        </ul>
+    </div>    
+
+    <div class="section" id="licensesandcertifications">
+        <h3>Licenses and Certifications</h3>
+        <ul>
+            <li>Introduction to Data Science with R - DQLab (2021)</li>
+            <li>Introduction to Data Science with Python - DQLab (2021)</li>
+            <li>R Fundamental for Data Science - DQLab (2021)</li>
+            <li>Python Fundamental for Data Science - DQLab (2021)</li>
+            <li>Fundamental SQL Using SELECT Statement - DQLab (2021)</li>
+            <li>Data Wrangling Python - DQLab (2022)</li>
+        </ul>
+    </div>  
+    <div class="center-wrapper">
+        <button id="backButton">Back</button>
+    </div>    
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

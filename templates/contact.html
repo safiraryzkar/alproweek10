@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="social-links">
+        <h3>Contact Me!</h3>
+        <div class="social-icon" onclick="window.location.href='mailto:safiraryzka08@gmail.com">
+            <img src="https://i.pinimg.com/564x/0c/1b/f7/0c1bf7f49030f7084504025ca2ea6c72.jpg" alt="Email Logo">
+            <p>Email</p>
+        </div>
+        <div class="social-icon" onclick="window.location.href='http://github.com/safiraryzkar'">
+            <img src="https://i.pinimg.com/564x/0c/1b/f7/0c1bf7f49030f7084504025ca2ea6c72.jpg" alt="GitHub Logo">
+            <p>GitHub</p>
+        </div>
+        <div class="social-icon" onclick="window.location.href='https://www.linkedin.com/in/safira-r-883003222/'">
+            <img src="https://i.pinimg.com/564x/0c/1b/f7/0c1bf7f49030f7084504025ca2ea6c72.jpg" alt="LinkedIn Logo">
+            <p>LinkedIn</p>
+        </div>
+        <div class="social-icon" onclick="window.location.href='https://www.kaggle.com/safirar'">
+            <img src="https://i.pinimg.com/564x/0c/1b/f7/0c1bf7f49030f7084504025ca2ea6c72.jpg" alt="Kaggle Logo">
+            <p>Kaggle</p>
+        </div>
+    </div>
+    <div class="center-wrapper">
+        <button id="backButton">Back</button>
+    </div>    
+</body>
+</html>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

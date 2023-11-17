@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+   <div class="projects">
+        <h3>Selected Projects</h3>
+    
+        <!-- Project 1 -->
+        <div class="project-section blue-background">
+            <div class="project-content">
+                <div class="project-text">
+                    <h4>Classifier Breast Cancer Wiconsin in sklearn</h4>
+                    <p>Analysis of breast cancer Wisconsin using python programming language, the dataset was prepocessed using encoding and applying the min-max scaler. After preprocessing, the data was partitioned using cross-validation and classification models were created using logistic regression, decision tree, and naive Bayes algorithms. The performance of each classifier was evaluated using confusion matrices. The results revealed that both logistic regression and naive Bayes models achieved the highest accuracy of 90% in determining whether a patient has cancer or not.
+                    </p>
+                </div>
+                <img src="https://i.pinimg.com/564x/c7/80/5d/c7805d61cca390822f5ea2267598cd8e.jpg" alt="Project 1">
+            </div>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="project-section white-background">
+            <div class="project-content">
+                <img src="https://i.pinimg.com/564x/c7/80/5d/c7805d61cca390822f5ea2267598cd8e.jpg" alt="Project 2">
+                <div class="project-text">
+                    <h4>Analysis of 'Pinjol' Tweets through Twitter Data Scraping and Advanced Text Processing Techniques</h4>
+                    <p>This study employs Twitter data scraping to analyze 'Pinjol' tweets, utilizing Sastrawi for linguistic preprocessing, which involves stemming and preprocessing for removing stop word and link. The analysis includes word cloud generation for preprocessing validation, TF-IDF for K-means clustering to group themes in the collected tweets, and social network analysis with centrality measures to evaluate user influence. This comprehensive approach aims to reveal patterns within the 'Pinjol' discourse on Twitter.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Project 3 -->
+        <div class="project-section blue-background">
+            <div class="project-content">
+                <div class="project-text">
+                    <h4>Project Title 3</h4>
+                    <p>Lorem ipsum</p>
+                </div>
+                <img src="https://i.pinimg.com/564x/c7/80/5d/c7805d61cca390822f5ea2267598cd8e.jpg" alt="Project 3">
+            </div>
+        </div>
+    
+        <!-- Project 4 -->
+        <div class="project-section white-background">
+            <div class="project-content">
+                <img src="https://i.pinimg.com/564x/c7/80/5d/c7805d61cca390822f5ea2267598cd8e.jpg" alt="Project 4">
+                <div class="project-text">
+                    <h4>Project Title 4</h4>
+                    <p>Lorem ipsum</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="center-wrapper">
+        <button id="backButton">Back</button>
+    </div>    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

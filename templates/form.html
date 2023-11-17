@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/styless.css') }}">
+
+</head>
+<body>
+    <form id="myForm">
+        <label for="nama">Name:</label><br>
+        <input type="text" id="nama" name="nama"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('#myForm').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/hasil',
+                    data: $('#myForm').serialize(),
+                    success: function(response){
+                        $('#result').html(response);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <div class="center-wrapper">
+        <button id="backButton">Back</button>
+    </div>    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+</body>
+</html>

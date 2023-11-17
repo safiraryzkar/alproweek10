@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+        <div class="profile-image"> 
+            <div class="content-left">
+                <div id="welcome-text">Welcome to my Portfolio</div>
+                <div id="hi-text">Hi I’m<br/></div>
+                <div id="name-text">Safira Ryzka</div>
+                <div id="name-text">Rahmadianti<br/></div>
+                <div id="designation-text">Data Scientist</div>
+            </div>
+        
+            <div class="about-me">
+                <h3>About Me</h3>
+                <p>An ongoing undergraduate student currently pursuing Data Science in the Faculty of Advanced Technology and Multidiscipline. My objective is to apply my knowledge of data science using R, python, and SQL to analysis complex dataset, make data-driven decisions, extract meaningful insights and create impactful visualizations that effectively communicate complex information. I am driven to pursue a career in data analysis, data analytics and data science and committed to continuous learning and growth in these areas.</p>
+            </div>
+
+            <img src="https://i.pinimg.com/564x/3f/de/91/3fde9164847e84d8ff445079c510a502.jpg" alt="Profile Image" id="profile-image">
+        </div>
+    </div>
+
+    <div class="center-wrapper">
+        <button id="backButton">Back</button>
+    </div>    
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+</body>
+</html>
